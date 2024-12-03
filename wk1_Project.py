@@ -362,7 +362,43 @@ import string
 
 
 
-# Attempt 19
+# Attempt 19  **Success for Part 1*
+
+#dept = input('What department will the EC2\'s be under? ')
+#ec2 = int(input('How many EC2 instances would you like names for? '))
+
+#def get_random_name():
+ #name_source = string.ascii_letters + string.digits
+ ## select  lowercase
+ #name = random.choice(string.ascii_lowercase)
+ ## select  uppercase
+ #name += random.choice(string.ascii_uppercase)
+ ## select  digits
+ #name += random.choice(string.digits)
+ 
+ #for n in range(8):
+  #name += random.choice(name_source)
+
+ #name_list = list(name)
+    ## shuffle all characters
+ #random.SystemRandom().shuffle(name_list)
+ #name = ''.join(name_list)
+ #return name
+  
+#i = 1
+
+#while True:
+ #print(dept + get_random_name())
+ #i += 1
+ #if i > ec2:
+  #break
+#print('Here are your EC2 names!')
+
+
+
+
+
+# Attempt 20 + Advanced
 
 dept = input('What department will the EC2\'s be under? ')
 ec2 = int(input('How many EC2 instances would you like names for? '))
@@ -388,8 +424,12 @@ def get_random_name():
 i = 1
 
 while True:
- print(dept + get_random_name())
- i += 1
- if i > ec2:
-  break
+ if dept == 'Marketing' or dept == 'marketing' or dept == 'Accounting' or dept == 'accounting' or dept == 'FinOps' or dept == 'finops':
+  print(dept + '_' + get_random_name())
+  i += 1
+  if i > ec2:
+   break
+ else:
+  print('Sorry, you are not authorized to use this Name Generator')
+  break 
 print('Here are your EC2 names!')
