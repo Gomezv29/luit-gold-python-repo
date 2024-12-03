@@ -224,16 +224,88 @@ import string
 
 # Attempt 13
 
+#dept = input('What department will the EC2\'s be under? ')
+#ec2 = int(input('How many EC2 instances would you like names for? '))
+
+#i = 1
+#N = 8
+
+#res = ''.join(random.choices(string.ascii_letters + string.digits, k=N))
+
+#while True:
+ #   print(dept + str(res), i)
+  #  i += 1
+   # if i > ec2:
+    #    break
+#print('Here are your EC2 names!')
+
+
+
+
+# Attempt 14
+
+#dept = input('What department will the EC2\'s be under? ')
+#ec2 = int(input('How many EC2 instances would you like names for? '))
+
+#i = 1
+#N = 8
+#L = [string.ascii_letters, string.digits]
+
+##res = ''.join(random.choices(string.ascii_letters + string.digits, k=N))
+#random.shuffle(L)
+#shuf = ''.join(L)
+
+#while True:
+ #   print(dept + shuf, i)
+  #  i += 1
+   # if i > ec2:
+    #    break
+#print('Here are your EC2 names!')
+
+
+
+
+# Attempt 15
+
+#dept = input('What department will the EC2\'s be under? ')
+#ec2 = int(input('How many EC2 instances would you like names for? '))
+
+#i = 1
+#N = 8
+#L = [res]
+
+#res = ''.join(random.choices(string.ascii_letters + string.digits, k=N))
+#random.shuffle(L)
+#shuf = ''.join(L)
+
+#while True:
+ #   print(dept + shuf, i)
+  #  i += 1
+   # if i > ec2:
+    #    break
+#print('Here are your EC2 names!')
+
+
+
+
+
+
+
+# Attempt 16
+
 dept = input('What department will the EC2\'s be under? ')
 ec2 = int(input('How many EC2 instances would you like names for? '))
+#res = ''.join(random.choices(string.ascii_letters + string.digits, k=N))
 
 i = 1
 N = 8
+L = [random.choices(string.ascii_letters, string.digits)]
 
-res = ''.join(random.choices(string.ascii_letters + string.digits, k=N)
+random.sample(L)
+shuf = ''.join(L)
 
 while True:
-    print(dept + str(res), i)
+    print(dept + shuf, i)
     i += 1
     if i > ec2:
         break
