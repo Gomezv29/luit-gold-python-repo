@@ -127,3 +127,24 @@ print('Original:', list_original, '\nNew:', list_new)
 list_original = [1, 2, 3]
 list_new = list_original
 # So if you modify one of the above lists you'll also modify the other'
+
+
+
+
+
+# List comprehension
+
+# We use loops to make larger lists
+numbers = []
+for i in range(1, 101):
+    numbers.append(i)
+print(numbers)
+# The above will get the job done, but Python has list comprehension which creates larger lists faster
+
+
+numbers = [i for i in range(1, 100)]
+print(numbers)
+
+
+numbers = [i for i in range(1, 100) if i % 3 != 0]
+print(numbers)
