@@ -148,3 +148,102 @@ print(numbers)
 
 numbers = [i for i in range(1, 100) if i % 3 != 0]
 print(numbers)
+
+
+
+
+
+
+
+# Nested Lists
+
+# You can mix multiple data types with a single list, but it is not recommended
+countries = [1, 'UK', 2, 'US']
+
+# Lists can have other lists as elements
+cells = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']]
+print(cells[0]) # This will print out the first set ['A1', 'A2', 'A3']
+
+# If you want to print out the first element of the first set
+print(cells[0][0]) #This will print out A1
+
+for x in cells:
+    print('Element', x)
+    
+# For the individual elements, we use nested for loops
+for x in cells:
+    for y in x:
+        print('Element', y)
+        
+# Nested lists (AKA multidimensional lists) are used frequently in programming to represent tables
+
+# You can also print out the data in a table format
+table = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']]
+for row in table:
+    for cell in row:
+        print(cell, '', end='')
+    print()
+    
+# How to create a table that lists 1 - 5
+#1 2 3 4 5
+#1 2 3 4 5 
+#1 2 3 4 5
+#1 2 3 4 5
+
+
+# We start with one line
+table = [i for i in range(1, 6)]
+print(table) 
+
+# Then we print out multiple lines
+table = [[i for i in range(1, 6)] for j in range(4)]
+print(table) 
+
+
+
+
+
+# Adding and Multiplying lists
+
+# Adding lists
+list_us = ['New York City', 'Chicago']
+list_uk = ['London', 'Bristol']
+list_all = list_us + list_uk
+print(list_all)
+
+
+# Multiplying Lists
+list_numbers = [0, 1] * 10
+print(list_numbers)
+
+
+
+
+
+
+
+# Further string features
+
+# We can use indexing and slicing with strings to read individual characters or groups of characters
+fav_band = 'Green Day'
+print(fav_band[6])
+
+print(fav_band[:6])
+
+# We can use methods to transform our string somehow and give us a new string
+# An example would be a lower case string to upper case string
+
+text = 'please capitlize me'
+text_cap = text.upper()
+print(text_cap)
+
+
+#We also have string methods that return 'true' or 'false'
+# We also have methods that can recognize when a number is in a string
+
+user_number = input('Please provide a numeber: ')
+if user_number.isnumeric():
+    print('Thank you, that\'s a correct number!')
+else:
+    print('Sorry,', user_number, 'is not a number!')
+    
