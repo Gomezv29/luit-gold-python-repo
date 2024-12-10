@@ -34,3 +34,14 @@ print(count, 'connections lead to Rome with an average flight time of', avg, 'mi
 
 
 #print(' with an average flight time of ', time_avg, 'minutes')
+
+# answer to exercise
+#counter = 0
+#sum = 0.0
+ 
+#for con in connections:
+ #   if con[1] == 'Rome':
+  #      counter += 1
+   #     sum += con[2]
+ 
+#print(counter, 'connections lead to Rome with an average flight time of', sum/counter, 'minutes')
