@@ -19,21 +19,14 @@ connections = [
     # You should also calculate the avg. flight time.
     # Print this output: {} connections lead to Rome with an average flight time of {} minutes
     # Replace {} with # of connections and avg flight time.
+count = 0
+t = 0
+i = 0
 
-for time in connections:
-    print(time[2])
-
-def average(connections):
-    total = 0
-    count = 0
-    for time in connections:
-        total += time[2]
+for city_to in connections:
+    if city_to[1] == 'Rome':
         count += 1
-        return total / count
-
-avg_flight_time = average(connections)
-
-print('Average flight time:', avg_flight_time)    
+print(count, 'connections lead to Rome')
 
 
 #print(' with an average flight time of ', time_avg, 'minutes')
