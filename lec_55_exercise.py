@@ -17,20 +17,16 @@ sample_dict = {
     #    break
     #else:
      #   print('No match!')
-
-eng = sample_dict.keys()
-ger = sample_dict.values()
      
-        
-        
-for trans in sample_dict.items():
-    user_input = input('Enter a word in English or EXIT: ')
-    if :
-        print('Translation:', ger)
-    elif user_input == 'EXIT':
-        break
-    else:
-        print('No match!')
-        
-        
-        
+
+
+while True:
+ user_input = input('Enter a word in English or EXIT: ')
+ if user_input == 'EXIT':
+  break
+ if user_input in sample_dict:
+  print('Translation:', sample_dict[user_input])
+ else:
+  print('No match!')
+
+print('Bye!')
