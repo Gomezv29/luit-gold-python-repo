@@ -26,7 +26,11 @@ i = 0
 for city_to in connections:
     if city_to[1] == 'Rome':
         count += 1
-print(count, 'connections lead to Rome')
+    for time in connections:
+        t += time[2]
+        i += 1
+        avg = t / i
+print(count, 'connections lead to Rome with an average flight time of', avg, 'minutes')
 
 
 #print(' with an average flight time of ', time_avg, 'minutes')
